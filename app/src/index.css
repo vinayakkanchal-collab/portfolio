@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 14% 95%;
+    --foreground: 0 0% 10%;
+    --card: 40 17% 97%;
+    --card-foreground: 0 0% 10%;
+    --popover: 40 14% 95%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 40 14% 95%;
+    --secondary: 30 6% 69%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 30 6% 69%;
+    --muted-foreground: 120 6% 51%;
+    --accent: 28 42% 59%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 10% 68%;
+    --input: 30 10% 68%;
+    --ring: 28 42% 59%;
+    --radius: 0.5rem;
+
+    --color-cream: #F5F3EE;
+    --color-charcoal: #1A1A1A;
+    --color-sage: #7A8B7A;
+    --color-gold: #C4956A;
+    --color-taupe: #B8B0A8;
+    --color-offwhite: #FAFAF8;
+    --color-deep-charcoal: #1A1A1A;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-cream {
+    color: var(--color-cream);
+  }
+
+  .text-charcoal {
+    color: var(--color-charcoal);
+  }
+
+  .text-sage {
+    color: var(--color-sage);
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+
+  .text-taupe {
+    color: var(--color-taupe);
+  }
+
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+
+  .bg-charcoal {
+    background-color: var(--color-charcoal);
+  }
+
+  .bg-offwhite {
+    background-color: var(--color-offwhite);
+  }
+
+  .border-taupe {
+    border-color: var(--color-taupe);
+  }
+
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-taupe);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sage);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal);
+}
